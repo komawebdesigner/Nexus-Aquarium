@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* CSS Document */
+/*Header Styling*/
+header
+{
+	width: 960px;
+    height: 100px;
+    margin-right:100px;
+}
+/*body #body css ends here*/
+body
+{
+	background-image:url(../images/aquablue.jpg);
+	background-repeat:no-repeat;
+	-webkit-background-size:cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	-ms-background-size: cover;
+  	background-size: cover;
+	
+}
+/*css code that styles the img tag with the id 'logo'*/
+#logo
+{
+	float:left;
+	padding-left:1px;
+	margin-left:20px;
+	margin-top:10px;
+	width:250px;
+	height:250px;
+}
+/*styling the div with id container*/
+#container
+{
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+}
+/*The last div combining two div's of calendar ends here */ 
+.calendar{
+	float:right;
+	margin:50px;
+}
+/*css for the ul with id footerLinks*/
+#footerLinks
+{
+	color:#000;
+	font-size:15.3px;
+}
+/*styles the content of the nav bar*/
+ul
+{
+	margin-left:30px;
+	bottom:0;
+	width:100%;
+}
+li 
+{
+	float: left;
+	list-style-type:none;
+}
+/*The main ,schedule css*/
+#main{
+	border-color:#CCC;
+	margin:0 auto;
+	margin-bottom:3px;
+	font-size:16px;
+	line-height:10px;
+	font-weight: 100px;
+    background-color:#3C6;
+    color:#fff;
+    line-height:21px;
+    border-radius:25px;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    -o-border-radius:25px;
+    -ms-border-radius:25px;
+}
+/*This is schedule and Details*/
+#scheduledetail{
+	background-color: #333;
+	font-family:"glyphicons halflings regular";
+	font-size:16px;
+	opacity:0.9;
+	color: #000;
+	line-height: 20px;
+	border-radius: 15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-o-border-radius:15px;
+	-ms-border-radius:15px;
+	float: left;
+	margin-left:300px;
+	width:60%
+	margin:10px;
+	padding-left:40PX;;
+}
+/*Here is e-Pay master card logo*/
+ #epay td th tr, table {
+	color: #FFF;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius:15px;
+	-o-border-radius:15px;
+	-ms-border-radius:15px;
+	margin: 5px;
+	padding-bottom: 5px;
+	padding: 10px;
+	position: relative;
+	text-align: center;
+}
+/*code for the <a> tag*/
+a:link, a:visited 
+{
+	width: 150px;
+	font-weight: bold;
+	color: #FFF;
+	background-color:inherit;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+}
+strong {
+	color:#F90;
+}
+.mail
+{
+	color:#000;
+	font-weight:bold;
+	font-family:"glyphicons halflings regular";
+	font-size:16px;
+}
+#mail
+{
+	display:inline;
+}
+/*div with id feedback*/
+#feedback
+{
+	margin-left:320px;
+	margin-top:455px;
+	width:600px;
+	height:600px;
+}
+.left
+{
+	float:left;
+	width:400px;
+	height:350px;
+}
+.right
+{
+	width:400px;
+	height:350px;
+	margin-left:350px;
+	background-color: #333;
+	font-family:"glyphicons halflings regular";
+	font-size:16px;
+	color:#FFF;
+	opacity:0.9;
+	line-height: 20px;
+	border-radius: 15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-o-border-radius:15px;
+	-ms-border-radius:15px;
+	width:60%;
+	height:52.3%;
+	padding-left:40px;
+}
+/*form controls with id usr*/
+#usr
+{
+	width:350px;
+}
+/*style for h4 with class id booking*/
+.booking
+{
+	color:#000;
+	margin-left:-15px;
+	font-weight:inherit;
+	font-family:"glyphicons halflings regular";
+	font-size:18px;
+}
+/*style for h4 with class id payment*/
+.payment
+{
+	color:#000;
+	font-family:"glyphicons halflings regular";
+	font-weight:bold;
+	font-size:18px;
+}
+/*style for span tag with class id star*/
+.star
+{
+	color:#F30;
+}

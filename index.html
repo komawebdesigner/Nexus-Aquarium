@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nexus Aquarium - Experience The Sea. </title>
+        <link rel="stylesheet" href="css/aquarium.css"/>
+        <link rel="icon" href="images/icons/1442059916_Dolphin.png"/>
+        <!--Content Delivery Network-->
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!--served by google-->
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--jssor slider link-->
+        
+        <script src="scripts/jssor.js"></script>
+        <script src="scripts/jssor.slider.js"></script>
+        <script>
+        	jQuery(document).ready(function ($) {
+            		var options = {
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 0,
+                                //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+                }
+            };
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+			
+			//responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var windowWidth = $Jssor$.$WindowSize().x;
+                if (windowWidth)
+                    jssor_slider1.$ScaleWidth(Math.max(Math.min(windowWidth, 600), 300));
+                else
+                    $Jssor$.$Delay(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+
+            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        });
+		</script>
+    </head>
+    <body>
+    <div id="container"> <!--main div used in the header-->
+    	<header class="centertext"> <!--header for the homepage-->
+        	<img alt="aquarium logo" id="logo" src="images/NexusAquariumMainlogo.png">
+        </header>
+        <!--Navbar bootstrap-->
+        <nav>
+        <ul class="nav nav-tabs" style="border-bottom:0px">
+  			<li role="presentation" class="active"><a href="#">Home</a></li>
+  			<li role="presentation"><a href="pages/events.html">Events</a></li>
+ 		 	<li role="presentation"><a href="pages/gallery.html">Gallery</a></li>
+            <li role="presentation"><a href="pages/explore.html">Explore</a></li>
+            <li role="presentation"><a href="pages/contacts.html">Contact Us</a></li>
+		</ul>
+		</nav>
+    	</div>
+        <div id="text">
+        <h3><strong> Welcome To Nexus Aquarium</strong> </h3>
+        <div class="center">
+        <p align="justify">We are a non-profit group dedicated to Conservation of Aquatic life, Ocean Exploration and Marine Life Conservation.</br>
+        Situated in Washington DC, our Aquarium is home to over 5000 aquatic animals including the beautiful yet</br>
+        extremely dangerous blue-ringed octopus.Enjoy a remarkable journey and learn about the different varieties of aquatic animals </br>
+        on display.Plan a visit with us and experience the sea like you have never before.
+
+         </p>
+         </div>
+         <button onClick="window.location.href ='pages/gallery.html' " type="button" class="btn btn-group btn-lg"> Learn more</button>
+        </div>
+        &nbsp;
+        <!--div for the content of the homepage-->
+        <div id="content">
+			<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
+    <!-- Slides Container -->
+    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 120px; top: 21px; width: 602px; height: 326px; border: 4px solid #09F; border-radius: 10px;">
+    <!--images used in the slider-->
+    	<div><img alt="undersea" u="image" src="images/undersea.jpg" /></div>
+        <div><img alt="dolphin aquarium" u="image" src="images/dolphin-aquarium.jpg"/></div>
+        <div><img alt="puffer fish" u="image" src="images/fish.jpg"/></div>
+        <div><img alt="lion fish" u="image" src="images/marine-life.jpg"/></div>
+        <div><img alt="manta ray" u="image" src="images/manta-ray.jpg" /></div>
+        <div><img alt="shark" u="image" src="images/sharknado.jpg" /></div>
+        <div><img alt="puffer fish" u="image" src="images/puffer-fish.jpg" /></div>
+        <div><img alt="octopus" u="image" src="images/octopus-hq-wallpaper-1920x1080.jpg" /></div>
+        <div><img alt="underwater creatures" u="image" src="images/underwater-creatures.jpg" /></div>
+        <div><img alt="whales" u="image" src="images/whales.jpg" /></div>
+    	</div>
+		<style>
+            /* jssor slider arrow navigator skin 03 css */
+            /*
+            .jssora03l                  (normal)
+            .jssora03r                  (normal)
+            .jssora03l:hover            (normal mouseover)
+            .jssora03r:hover            (normal mouseover)
+            .jssora03l.jssora03ldn      (mousedown)
+            .jssora03r.jssora03rdn      (mousedown)
+            */
+            .jssora03l, .jssora03r {
+                display: block;
+                position: absolute;
+                /* size of arrow element */
+                width: 55px;
+                height: 55px;
+                cursor: pointer;
+                background: url(images/a19.png) no-repeat;
+                overflow: hidden;
+            }
+            .jssora03l { background-position: -3px -33px; }
+            .jssora03r { background-position: -63px -33px; }
+            .jssora03l:hover { background-position: -123px -33px; }
+            .jssora03r:hover { background-position: -183px -33px; }
+            .jssora03l.jssora03ldn { background-position: -243px -33px; }
+            .jssora03r.jssora03rdn { background-position: -303px -33px; }
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora03l" style="top: 175px; left: 121px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora03r" style="top: 175px; right: -122px;">
+        </span>
+        <!--#endregion Arrow Navigator Skin End -->
+		</div>
+        </div>
+            <!--div tag for next paragraph with content-->
+    	<div id="text1">
+    	<p align="justify"> Come visit our aquarium and learn from our expert Marine Biologists and Scientists, attend our short lectures</br> and get to learn about Marine Life. Experience our underwater tunnel aquarium and get to see the</br> variety of the sea creatures like never seen before. Know about our events for both adults and</br> children, bring your kids for our weekend events since we have set the weekend specifically for them.
+    </p>
+    </div>
+        &nbsp;
+    <div class="knowledge">
+    <ul class="explore">
+    <li><a target="_blank" href="images/aquarium inside.jpg" class="thumbnail">
+    <img src="images/aquarium-inside-small.jpg"/></a></li>
+    <li><a target="_blank" href="images/aquarium window.jpg" class="thumbnail">
+    <img src="images/aquarium-window-small.jpg"/></a></li>
+    <li><a target="_blank" href="images/aquarium whale.jpg" class="thumbnail">
+    <img src="images/aquarium-whale-small.jpg"/></a></li>
+    <li><a target="_blank" href="images/aquarium manta ray.jpg" class="thumbnail">
+    <img src="images/aquarium-manta-ray-small.jpg"/></a></li>
+    </ul>
+    </div>
+ 
+    <div id="buttons">
+    <ul id="buttons">
+   <li><button onClick="window.location.href = 'pages/explore.html' " type="button" class="btn btn-group btn-lg">Come Explore</button></li>
+   <li><button onClick="window.location.href = 'pages/gallery.html' " type="button" class="btn btn-group btn-lg">Know About Our Animals</button></li>
+   </ul>
+    </div>
+    </br>
+        
+        <!--div tag used to encapsulate the simulated bubbles on the homepage-->
+        <div id="bubbles">
+          <span class="bubbling">
+          <span class="glow">
+          </span></span>
+      </div>
+      
+      <!--footer for the homepage-->
+            <div id="footer">       
+        <footer class="centertext">
+        <div id="icons">
+            <ul id="footerLinks" class="col-md-6 col-md-offset-4">
+  			<li role="presentation" class="active"><a href="#">Home |</a></li>
+  			<li role="presentation"><a href="pages/events.html">Events |</a></li>
+ 		 	<li role="presentation"><a href="pages/gallery.html">Gallery |</a></li>
+            <li role="presentation"><a href="pages/explore.html">Explore |</a></li>
+            <li role="presentation"><a href="pages/contacts.html">Contact Us</a></li>
+</ul>
+        <ul class="col-md-6 col-md-offset-4">
+        <li><a href="http://www.facebook.com/" title="Become our Fan!" target="_blank"><img src="images/icons/1442903947_facebook.png" alt="facebook"/></a></li>
+        <li><a href="http://www.twitter.com/" title="Follow us on"target="_blank"><img src="images/icons/1442903943_twitter.png" alt="twitter"/></a></li>
+        <li><a href="http://www.youtube.com/" title="Watch our videos!" target="_blank"><img src="images/icons/1442903930_social_style_2_youtube.png" alt="youtube"/></a></li>
+        <li ><a href="http://plus.google.com/" title="Add us to your circle!" target="_blank"><img src="images/icons/1442903957_google_plus.png" alt="google+"/></a></li>
+        <li><a href="http://www.instagram.com/" title="View our photos!" target="_blank"><img src="images/icons/1442903952_instagram.png" alt="instagram"/></a></li>
+        </ul>
+        </div>
+        <div class="col-md-6 col-md-offset-4">
+        <h5>
+        &copy; Nexus Aquarium &nbsp;<script type="text/javascript">document.write(new Date().getFullYear());</script>
+        </h5>
+      	</div>
+      </footer>
+      </div>
+    </body>
+</html>
